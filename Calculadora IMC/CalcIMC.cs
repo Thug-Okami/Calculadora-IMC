@@ -27,6 +27,37 @@ namespace Calculadora_IMC
             Double calculo = peso / (altura * altura);
 
             lblImcDisplay.Text = Convert.ToString(calculo);
+
+            if(calculo <= 18.4)
+            {
+                lblRankDisplay.Text = "Abaixo do peso";
+                lblRankDisplay.Visible = true;
+            }
+            else if(calculo <= 24.9)
+            {
+                lblRankDisplay.Text = "Peso normal";
+                lblRankDisplay.Visible = true;
+            }
+            else if(calculo <= 29.9)
+            {
+                lblRankDisplay.Text = "Acima do peso";
+                lblRankDisplay.Visible = true;
+            }
+            else if(calculo <= 34.9)
+            {
+                lblRankDisplay.Text = "Obesidade Grau 1";
+                lblRankDisplay.Visible = true;
+            }
+            else if(calculo <= 39.9)
+            {
+                lblRankDisplay.Text = "Obesidade Grau 2";
+                lblRankDisplay.Visible = true;
+            }
+            else if(calculo >= 40)
+            {
+                lblRankDisplay.Text = "Obesidade Grau 3";
+                lblRankDisplay.Visible = true;
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -56,7 +87,9 @@ namespace Calculadora_IMC
             
             if(altura >= 2.50 || altura <= 0)
             {
-                MessageBox.Show("Altura não pode ser maior que 2,50 metros");
+                MessageBox.Show("Altura não pode ser maior que 2,50 metros. \r\n Verifique a posição da vírgula.", "Calculadora IMC",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
         }
     }

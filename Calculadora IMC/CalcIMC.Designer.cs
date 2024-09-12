@@ -34,13 +34,16 @@ namespace Calculadora_IMC
             this.lblPeso = new System.Windows.Forms.Label();
             this.lblSImc = new System.Windows.Forms.Label();
             this.lblImcDisplay = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblRank = new System.Windows.Forms.Label();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCalc = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblRankDisplay = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAltura
@@ -67,7 +70,7 @@ namespace Calculadora_IMC
             // 
             this.lblSImc.AutoSize = true;
             this.lblSImc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSImc.Location = new System.Drawing.Point(576, 52);
+            this.lblSImc.Location = new System.Drawing.Point(59, 53);
             this.lblSImc.Name = "lblSImc";
             this.lblSImc.Size = new System.Drawing.Size(130, 24);
             this.lblSImc.TabIndex = 2;
@@ -77,21 +80,21 @@ namespace Calculadora_IMC
             // 
             this.lblImcDisplay.AutoSize = true;
             this.lblImcDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImcDisplay.Location = new System.Drawing.Point(712, 52);
+            this.lblImcDisplay.Location = new System.Drawing.Point(114, 92);
             this.lblImcDisplay.Name = "lblImcDisplay";
             this.lblImcDisplay.Size = new System.Drawing.Size(20, 24);
             this.lblImcDisplay.TabIndex = 3;
             this.lblImcDisplay.Text = "0";
             // 
-            // label5
+            // lblRank
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(433, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 24);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sua Classificação é de:";
+            this.lblRank.AutoSize = true;
+            this.lblRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRank.Location = new System.Drawing.Point(22, 126);
+            this.lblRank.Name = "lblRank";
+            this.lblRank.Size = new System.Drawing.Size(204, 24);
+            this.lblRank.TabIndex = 4;
+            this.lblRank.Text = "Sua Classificação é de:";
             // 
             // txtAltura
             // 
@@ -121,7 +124,6 @@ namespace Calculadora_IMC
             this.groupBox1.Size = new System.Drawing.Size(788, 329);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // btnCalc
             // 
@@ -146,36 +148,63 @@ namespace Calculadora_IMC
             // 
             // btnSair
             // 
+            this.btnSair.BackColor = System.Drawing.Color.Crimson;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.LightGray;
             this.btnSair.Location = new System.Drawing.Point(16, 196);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 30);
             this.btnSair.TabIndex = 10;
             this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblRankDisplay
+            // 
+            this.lblRankDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRankDisplay.Location = new System.Drawing.Point(22, 163);
+            this.lblRankDisplay.MinimumSize = new System.Drawing.Size(204, 24);
+            this.lblRankDisplay.Name = "lblRankDisplay";
+            this.lblRankDisplay.Size = new System.Drawing.Size(204, 24);
+            this.lblRankDisplay.TabIndex = 11;
+            this.lblRankDisplay.Text = "Sua Classificação é de:";
+            this.lblRankDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRankDisplay.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblSImc);
+            this.panel1.Controls.Add(this.lblRankDisplay);
+            this.panel1.Controls.Add(this.lblImcDisplay);
+            this.panel1.Controls.Add(this.lblRank);
+            this.panel1.Location = new System.Drawing.Point(528, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(260, 233);
+            this.panel1.TabIndex = 12;
             // 
             // frmcalcImc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.txtAltura);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblImcDisplay);
-            this.Controls.Add(this.lblSImc);
             this.Controls.Add(this.lblPeso);
             this.Controls.Add(this.lblAltura);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmcalcImc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora IMC";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,13 +216,15 @@ namespace Calculadora_IMC
         private System.Windows.Forms.Label lblPeso;
         private System.Windows.Forms.Label lblSImc;
         private System.Windows.Forms.Label lblImcDisplay;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblRank;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblRankDisplay;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
