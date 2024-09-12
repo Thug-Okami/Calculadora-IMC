@@ -103,6 +103,7 @@ namespace Calculadora_IMC
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(133, 26);
             this.txtAltura.TabIndex = 5;
+            this.txtAltura.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAltura_KeyDown);
             this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
             this.txtAltura.Leave += new System.EventHandler(this.txtAltura_Leave);
             // 
@@ -113,7 +114,9 @@ namespace Calculadora_IMC
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(130, 26);
             this.txtPeso.TabIndex = 6;
+            this.txtPeso.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPeso_KeyDown);
             this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
+            this.txtPeso.Leave += new System.EventHandler(this.txtPeso_Leave);
             // 
             // groupBox1
             // 
@@ -145,6 +148,7 @@ namespace Calculadora_IMC
             this.btnLimpar.TabIndex = 9;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
@@ -155,7 +159,7 @@ namespace Calculadora_IMC
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 30);
             this.btnSair.TabIndex = 10;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "Voltar";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -200,9 +204,11 @@ namespace Calculadora_IMC
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmcalcImc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora IMC";
+            this.Load += new System.EventHandler(this.frmcalcImc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

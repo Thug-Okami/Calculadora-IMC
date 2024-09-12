@@ -52,10 +52,28 @@
     <Compile Include="CalcIMC.Designer.cs">
       <DependentUpon>CalcIMC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmComb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComb.Designer.cs">
+      <DependentUpon>frmComb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuPrincipal.Designer.cs">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CalcIMC.resx">
       <DependentUpon>CalcIMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComb.resx">
+      <DependentUpon>frmComb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuPrincipal.resx">
+      <DependentUpon>menuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
