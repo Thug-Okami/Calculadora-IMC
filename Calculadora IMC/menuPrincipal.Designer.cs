@@ -32,7 +32,7 @@ namespace Calculadora_IMC
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.btnImc = new System.Windows.Forms.Button();
             this.btnComb = new System.Windows.Forms.Button();
-            this.btn = new System.Windows.Forms.Button();
+            this.btnFolhaP = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -55,30 +55,38 @@ namespace Calculadora_IMC
             // 
             // btnComb
             // 
+            this.btnComb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComb.BackgroundImage")));
+            this.btnComb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnComb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComb.Location = new System.Drawing.Point(277, 11);
             this.btnComb.Name = "btnComb";
             this.btnComb.Size = new System.Drawing.Size(230, 250);
             this.btnComb.TabIndex = 1;
             this.btnComb.Text = "Combustível";
+            this.btnComb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnComb.UseVisualStyleBackColor = true;
             this.btnComb.Click += new System.EventHandler(this.btnComb_Click);
             // 
-            // btn
+            // btnFolhaP
             // 
-            this.btn.Location = new System.Drawing.Point(546, 11);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(230, 250);
-            this.btn.TabIndex = 2;
-            this.btn.Text = "button3";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
+            this.btnFolhaP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFolhaP.BackgroundImage")));
+            this.btnFolhaP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFolhaP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFolhaP.Location = new System.Drawing.Point(546, 11);
+            this.btnFolhaP.Name = "btnFolhaP";
+            this.btnFolhaP.Size = new System.Drawing.Size(230, 250);
+            this.btnFolhaP.TabIndex = 2;
+            this.btnFolhaP.Text = "Folha de Pagamento";
+            this.btnFolhaP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFolhaP.UseVisualStyleBackColor = true;
+            this.btnFolhaP.Click += new System.EventHandler(this.btnFolhaP_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(8, 267);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(230, 250);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -98,7 +106,7 @@ namespace Calculadora_IMC
             this.button6.Location = new System.Drawing.Point(546, 267);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(230, 250);
-            this.button6.TabIndex = 3;
+            this.button6.TabIndex = 5;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -122,7 +130,7 @@ namespace Calculadora_IMC
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.btn);
+            this.Controls.Add(this.btnFolhaP);
             this.Controls.Add(this.btnComb);
             this.Controls.Add(this.btnImc);
             this.Name = "frmMenuPrincipal";
@@ -136,7 +144,7 @@ namespace Calculadora_IMC
 
         private System.Windows.Forms.Button btnImc;
         private System.Windows.Forms.Button btnComb;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btnFolhaP;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;

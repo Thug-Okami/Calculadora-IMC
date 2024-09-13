@@ -34,14 +34,11 @@ namespace Calculadora_IMC
 
         }
 
-        private void btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnComb_Click(object sender, EventArgs e)
         {
-
+            frmComb open = new frmComb();
+            open.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -52,6 +49,13 @@ namespace Calculadora_IMC
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnFolhaP_Click(object sender, EventArgs e)
+        {
+            frmFolhaPagamento open = new frmFolhaPagamento();
+            open.Show();
+            this.Hide();
         }
     }
 }
