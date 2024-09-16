@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcIMC.cs">
+    <Compile Include="frmIMC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalcIMC.Designer.cs">
-      <DependentUpon>CalcIMC.cs</DependentUpon>
+    <Compile Include="frmIMC.Designer.cs">
+      <DependentUpon>frmIMC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmComb.cs">
       <SubType>Form</SubType>
@@ -72,8 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CalcIMC.resx">
-      <DependentUpon>CalcIMC.cs</DependentUpon>
+    <EmbeddedResource Include="frmIMC.resx">
+      <DependentUpon>frmIMC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmComb.resx">
       <DependentUpon>frmComb.cs</DependentUpon>
