@@ -34,48 +34,29 @@ namespace Calculadora_IMC
 
         private void txtSalarioBruto_TextChanged(object sender, EventArgs e)
         {
-            double salarioBruto, inss = 0, inssTaxa = 0, ir = 0, coopTaxa = 0, salarioLiquido;
+            double salarioBruto, inssTaxa = 0, ir = 0, coopTaxa = 0, salarioLiquido;
 
             double.TryParse(txtSalarioBruto.Text, out salarioBruto);
 
                 if (salarioBruto <= 1412)
                 {
-                    inss = 0;
+                    inssTaxa = salarioBruto * 0.075;
                 }
                 else if (salarioBruto <= 2666.68)
                 {
-                    inss = 1;
+                    inssTaxa = salarioBruto * 0.09 - 21.18;
                 }
                 else if (salarioBruto <= 4000.03)
                 {
-                    inss = 2;
+                    inssTaxa = salarioBruto * 0.12 - 101.18;
                 }
-                else if (salarioBruto <= 7786.02)
+                else if (salarioBruto <= 7786.01)
                 {
-                    inss = 3;
+                    inssTaxa = salarioBruto * 0.14 - 181.18;
                 }
-
-                switch (inss)
+                else if(salarioBruto >= 7786.02)
                 {
-                    case 0:
-                        inssTaxa = salarioBruto * 0.075;
-                        break;
-                    case 1:
-                        inssTaxa = salarioBruto * 0.09 - 21.18;
-                        break;
-                    case 2:
-                        inssTaxa = salarioBruto * 0.12 - 101.18;
-                        break;
-                    case 3:
-                        if (salarioBruto >= 7786.02)
-                        {
-                            inssTaxa = 908.86;
-                        }
-                        else
-                        {
-                            inssTaxa = salarioBruto * 0.14 - 181.18;
-                        }
-                        break;
+                    inssTaxa = 908.86;
                 }
 
                 if (salarioBruto <= 2112)
